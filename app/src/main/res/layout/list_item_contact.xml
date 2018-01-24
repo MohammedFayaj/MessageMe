@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/section"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivContactPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            android:layout_margin="1dp"
+            app:riv_corner_radius="50dp"
+            app:riv_oval="true" />
+        <LinearLayout
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_margin="1dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivCheckMark"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_checkmark_blue"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

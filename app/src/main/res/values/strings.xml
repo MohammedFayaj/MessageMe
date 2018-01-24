@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CallMe</string>
+    <string name="menu_select_period">Period</string>
+    <string name="stats_day">Today</string>
+    <string name="stats_week">Week</string>
+    <string name="stats_month">Month</string>
+    <string name="us_permission_title">Need Permission</string>
+    <string name="us_permission_settings_button">Grant</string>
+    <string name="minutes">mins</string>
+    <string name="hours">hours</string>
+</resources>

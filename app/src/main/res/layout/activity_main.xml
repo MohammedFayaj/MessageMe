@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    tools:context="sample.callme.com.callme.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="9"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Call Me!"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:drawableTop="@android:drawable/ic_menu_info_details"
+                android:gravity="center_horizontal|bottom"
+                android:singleLine="true"
+                android:text="i Procon"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_contacts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:padding="2dp"
+            android:gravity="center_vertical"
+            android:text="Please notify my selected Family/Friends"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/iv_pick_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/group_button"
+                android:gravity="end|top"
+                android:layout_alignParentLeft="true"
+                android:padding="7dp" />
+
+
+                <FrameLayout
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/circle_red"
+                    android:gravity="top"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_toRightOf="@+id/iv_pick_contact"
+                    android:layout_toEndOf="@+id/iv_pick_contact">
+
+                    <TextView
+                        android:id="@+id/tv_contacts_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+                </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_contact_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1"
+                android:paddingRight="15dp"
+                android:src="@android:drawable/ic_input_add" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_start_end_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_contacts_layout"
+        android:orientation="horizontal"
+        android:weightSum="11"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:text="During my normal active\ntime from"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_rectangle_border"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/tv_time_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:padding="2dp"
+            android:text="to"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_rectangle_border"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/tv_time_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_active_hours_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_start_end_time_layout"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:text="In case I am not active for"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/drop_down_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.5"
+            android:background="@drawable/rounded_rectangle_border"
+            android:paddingRight="8dp">
+
+            <Spinner
+                android:id="@+id/tv_count_active_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/seprarter"
+                android:layout_alignParentEnd="true"
+                android:src="@android:drawable/arrow_up_float" />
+
+            <View
+                android:id="@+id/seprarter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv_count_active_hours" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/seprarter"
+                android:src="@android:drawable/arrow_down_float" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:maxLines="1"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp"
+            android:text="hours"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_days_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_active_hours_layout"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:gravity="center_vertical"
+            android:padding="2dp"
+            android:text="Your active status will be\nstored on this phone only for"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.5"
+            android:background="@drawable/rounded_rectangle_border"
+            android:paddingRight="10dp">
+
+            <Spinner
+                android:id="@+id/tv_count_active_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+            <View
+                android:id="@+id/day_seprarter"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv_count_active_days" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_up_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/day_seprarter"
+                android:layout_alignParentEnd="true"
+                android:src="@android:drawable/arrow_up_float" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_down_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/day_seprarter"
+                android:src="@android:drawable/arrow_down_float" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="days"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/outgoing_messages_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_days_count"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:text="Out Going Messages"
+        android:textColor="@android:color/black" />
+
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:padding="3dp"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/app_usage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/outgoing_messages_view"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:text="APP Usage"
+        android:textColor="@android:color/black"
+        android:visibility="visible" />
+
+    <!--<ListView-->
+    <!--android:layout_below="@+id/refresh_layut"-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/apps_data_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"></ListView>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Family Notification Service"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@android:color/white" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/notification_service_switch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:background="@android:color/white"
+            android:button="@drawable/switch_selector"
+            android:gravity="center"
+            android:text=""
+            android:theme="@style/SwtichTheme"
+            android:thumb="@null" />
+    </LinearLayout>
+
+
+</RelativeLayout>

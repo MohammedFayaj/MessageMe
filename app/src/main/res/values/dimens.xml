@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_medium">16dp</dimen>
+    	    <dimen name="margin_large">32dp</dimen>
+    	    <dimen name="margin_huge">64dp</dimen>    <dimen name="usage_row_height">72dp</dimen>
+
+</resources>

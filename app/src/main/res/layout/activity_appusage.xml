@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar_appusage"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </android.support.v7.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/stats_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_contacts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar_appusage"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_app_usage"
+        android:scrollbars="vertical"
+        android:drawSelectorOnTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </LinearLayout>
+
+</RelativeLayout>

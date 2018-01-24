@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="always|collapseActionView"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/menu_item_choose_days"
+        android:icon="@drawable/date"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_select_period">
+        <menu>
+            <item
+                android:id="@+id/choose_submenu_day"
+                app:showAsAction="always"
+                android:title="@string/stats_day"/>
+
+            <item
+                android:id="@+id/choose_submenu_week"
+                app:showAsAction="always"
+                android:visible="false"
+                android:title="@string/stats_week"/>
+            <item
+                android:id="@+id/choose_submenu_month"
+                app:showAsAction="always"
+                android:title="@string/stats_month"/>
+        </menu>
+
+
+
+    </item>
+</menu>

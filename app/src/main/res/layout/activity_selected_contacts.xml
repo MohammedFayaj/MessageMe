@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sample.callme.com.callme.SelectedContacts">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Added Contacts"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                />
+            <ImageView
+                android:id="@+id/tv_close_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="2"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:textSize="10sp"
+                android:textColor="@android:color/white"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"/>
+
+    <ListView
+    android:id="@+id/lv_selected_contacts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:padding="5dp"></ListView>
+</LinearLayout>
